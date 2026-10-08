@@ -1,1 +1,2 @@
-// Independent evaluation fixture is added on each case branch.
+func quota(units value: Int) -> Int { value + 13 }
+func sample() -> Int { quota(units: 4) }
