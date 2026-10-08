@@ -1,1 +1,2 @@
-// Independent evaluation fixture is added on each case branch.
+func discount(_ value: Int?) -> Int { value! + 4 }
+func sample() -> Int { discount(9) }
