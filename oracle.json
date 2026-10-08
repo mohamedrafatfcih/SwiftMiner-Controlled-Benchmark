@@ -1,0 +1,1222 @@
+{
+  "schema_version": 1,
+  "status": "frozen-before-detection",
+  "construction_date": "2026-10-08",
+  "scaffold_sha": "eb4d8d5b1b0e9deb8440509fff9b8b9a99f11db4",
+  "evaluation_scope": [
+    "refactorToProtocol",
+    "refactorToProtocolExtension",
+    "refactorToTypeExtension",
+    "refactorToEnumCasesWithParameters",
+    "refactorToEnumExtension",
+    "protocolRename",
+    "safeUnwrapOptional",
+    "introduceDefer",
+    "nameFunctionParameter",
+    "makeParameterNameOptional"
+  ],
+  "construction": "Author-designed; generated after reviewing detector implementation; not held-out or independent.",
+  "validation": "Manual source review and structural integrity checks only. Not compiled; no behavior tests executed.",
+  "cases": [
+    {
+      "case_id": "R1-P1",
+      "catalog_id": "R1",
+      "detector_id": "refactorToProtocol",
+      "polarity": "positive",
+      "source_entity": "FareMeter",
+      "target_entity": "FareQuoting",
+      "rationale": "Existing struct gains conformance with matching method; client accepts protocol.",
+      "behavior_domain": "Deterministic inputs shown in sample().",
+      "before_sha": "cc61e7d0c6b6fafd0ad57c3f6e66ffb1ee7219e1",
+      "after_sha": "911fc98f45a41e981d67a2352aca698c2afd85af",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 1,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-5",
+        "after": "Sources/Fixture.swift:1-8"
+      },
+      "sha256": {
+        "before": "bc1143dd3ac3c1fc452edf2937b4f5e9f7b5035ace4206af8c8e2e73d6aefc03",
+        "after": "a85704f753532640a5e79d16f61a8dc5fc63b9f0d4e5cad15c1fa8bc207230be"
+      },
+      "expectations": [
+        {
+          "expectation_id": "R1-P1-E1",
+          "detector_id": "refactorToProtocol",
+          "source_entity": "FareMeter",
+          "target_entity": "FareQuoting",
+          "identity_policy": "Match full entity tuple with case, type, owner, member and parameter index as applicable; inspect raw payload locations. One-to-one; duplicate emissions are FP."
+        }
+      ]
+    },
+    {
+      "case_id": "R1-P2",
+      "catalog_id": "R1",
+      "detector_id": "refactorToProtocol",
+      "polarity": "positive",
+      "source_entity": "ArchiveShelf",
+      "target_entity": "CapacityProviding",
+      "rationale": "Existing class gains property-based conformance; client uses abstraction.",
+      "behavior_domain": "Deterministic inputs shown in sample().",
+      "before_sha": "26f3647cade2de865b0f9b8a5637ea15f0678a1e",
+      "after_sha": "6d4b8b90a617b88a1d5d6384a631adc1d852fbc3",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 1,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-5",
+        "after": "Sources/Fixture.swift:1-8"
+      },
+      "sha256": {
+        "before": "726f82e2450959b0ea7e0cdb7a469d9522f76dcaf16dde628280c1cf5c7083ff",
+        "after": "364932a66d3a37e8bb5c55b746b5b8a8b0a916594b93d9d5cfa70bce37b367fd"
+      },
+      "expectations": [
+        {
+          "expectation_id": "R1-P2-E1",
+          "detector_id": "refactorToProtocol",
+          "source_entity": "ArchiveShelf",
+          "target_entity": "CapacityProviding",
+          "identity_policy": "Match full entity tuple with case, type, owner, member and parameter index as applicable; inspect raw payload locations. One-to-one; duplicate emissions are FP."
+        }
+      ]
+    },
+    {
+      "case_id": "R1-P3",
+      "catalog_id": "R1",
+      "detector_id": "refactorToProtocol",
+      "polarity": "positive",
+      "source_entity": "Pavilion.Ticket",
+      "target_entity": "TicketQuoting",
+      "rationale": "Nested existing type gains conformance with two requirements; semantic positive even if unsupported.",
+      "behavior_domain": "Deterministic inputs shown in sample().",
+      "before_sha": "4ab67e1af44e0c8d380ab5bb022482734d9d39da",
+      "after_sha": "da22acb9af2940788d2c96eb4ca35a9ec7af8ed5",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 1,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-8",
+        "after": "Sources/Fixture.swift:1-12"
+      },
+      "sha256": {
+        "before": "0ca7e09dbb8b0b1bc062635245e3fb07c5391c80b555c0f7aa38f9b48f6b9795",
+        "after": "ac76e063d71af6243278fdea397cc6b35649003ae0963fcf314a4ce7b22a533e"
+      },
+      "expectations": [
+        {
+          "expectation_id": "R1-P3-E1",
+          "detector_id": "refactorToProtocol",
+          "source_entity": "Pavilion.Ticket",
+          "target_entity": "TicketQuoting",
+          "identity_policy": "Match full entity tuple with case, type, owner, member and parameter index as applicable; inspect raw payload locations. One-to-one; duplicate emissions are FP."
+        }
+      ]
+    },
+    {
+      "case_id": "R1-N1",
+      "catalog_id": "R1",
+      "detector_id": "refactorToProtocol",
+      "polarity": "negative",
+      "source_entity": "ParcelScale",
+      "target_entity": "WeightReporting",
+      "rationale": "Matching protocol is added but ParcelScale never gains conformance.",
+      "behavior_domain": "Deterministic inputs shown in sample().",
+      "before_sha": "caa16d9cc9d798c08ac18ebf2c0283a78a1539d9",
+      "after_sha": "10e6a4d27d0b9cb9207740a07c876ebf4df50b4b",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 0,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-4",
+        "after": "Sources/Fixture.swift:1-7"
+      },
+      "sha256": {
+        "before": "26a776dbcd89ad63ba1a4b0367daa71d98e9c170e869cbf3b2aebfaa2501782a",
+        "after": "a8dd8618c5363078e454956c04b594bb24f6d296c19c6303074f6c0649a6ca64"
+      },
+      "expectations": []
+    },
+    {
+      "case_id": "R2-P1",
+      "catalog_id": "R2",
+      "detector_id": "refactorToProtocolExtension",
+      "polarity": "positive",
+      "source_entity": "Kiln.score()",
+      "target_entity": "KilnScoring.score()",
+      "rationale": "Method implementation moves to existing protocol extension using required state.",
+      "behavior_domain": "Deterministic inputs shown in sample().",
+      "before_sha": "3c5cee72dab54cb50456d481f69d62ea8c341717",
+      "after_sha": "2b94ffbdcbd69468d1938128a700f7cc7e5b9a1e",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 1,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-9",
+        "after": "Sources/Fixture.swift:1-11"
+      },
+      "sha256": {
+        "before": "d4d7c0b0ccc699c2dda1e4bd5da6f187c0bc5966835ce7c02a3dcbef022bdd29",
+        "after": "0d32b77f72f5c9dd7d6b1111ce9676495dddd69af3b85985f6a5ef4d86a1df11"
+      },
+      "expectations": [
+        {
+          "expectation_id": "R2-P1-E1",
+          "detector_id": "refactorToProtocolExtension",
+          "source_entity": "Kiln.score()",
+          "target_entity": "KilnScoring.score()",
+          "identity_policy": "Match full entity tuple with case, type, owner, member and parameter index as applicable; inspect raw payload locations. One-to-one; duplicate emissions are FP."
+        }
+      ]
+    },
+    {
+      "case_id": "R2-P2",
+      "catalog_id": "R2",
+      "detector_id": "refactorToProtocolExtension",
+      "polarity": "positive",
+      "source_entity": "Beacon.banner()",
+      "target_entity": "BeaconText.banner()",
+      "rationale": "Class method moves into existing protocol extension without class-only state.",
+      "behavior_domain": "Deterministic inputs shown in sample().",
+      "before_sha": "15382b922eaa98805e1de33bf4949a1d18c811dc",
+      "after_sha": "661242e2a2ebeec779ee9d60455eda5cf633ae32",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 1,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-7",
+        "after": "Sources/Fixture.swift:1-8"
+      },
+      "sha256": {
+        "before": "ad5e03c80d1c465a836230d2008cc885ea2a868471d55f7f0f41ce54c83a9b25",
+        "after": "f95a139ba29efe4e2dd574314078311a693ff164f90b9645e79fb6c894f60874"
+      },
+      "expectations": [
+        {
+          "expectation_id": "R2-P2-E1",
+          "detector_id": "refactorToProtocolExtension",
+          "source_entity": "Beacon.banner()",
+          "target_entity": "BeaconText.banner()",
+          "identity_policy": "Match full entity tuple with case, type, owner, member and parameter index as applicable; inspect raw payload locations. One-to-one; duplicate emissions are FP."
+        }
+      ]
+    },
+    {
+      "case_id": "R2-P3",
+      "catalog_id": "R2",
+      "detector_id": "refactorToProtocolExtension",
+      "polarity": "positive",
+      "source_entity": "Crate.doubledWidth",
+      "target_entity": "CrateSizing.doubledWidth",
+      "rationale": "Computed property implementation moves into existing protocol extension.",
+      "behavior_domain": "Deterministic inputs shown in sample().",
+      "before_sha": "07ad1f65060cc7a4933a080de39558ee023d0eb8",
+      "after_sha": "01624468ea0c9783c61e88c2e04f3f53dc4601f5",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 1,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-9",
+        "after": "Sources/Fixture.swift:1-11"
+      },
+      "sha256": {
+        "before": "11dc85b24014acf240ff66a5b0eb1116427b58ce93d9f2ca03094f13905383a6",
+        "after": "5cce5b4e4c055d01a2790a9fcc9594921467cdd911b80552647e49d1111d13d0"
+      },
+      "expectations": [
+        {
+          "expectation_id": "R2-P3-E1",
+          "detector_id": "refactorToProtocolExtension",
+          "source_entity": "Crate.doubledWidth",
+          "target_entity": "CrateSizing.doubledWidth",
+          "identity_policy": "Match full entity tuple with case, type, owner, member and parameter index as applicable; inspect raw payload locations. One-to-one; duplicate emissions are FP."
+        }
+      ]
+    },
+    {
+      "case_id": "R2-N1",
+      "catalog_id": "R2",
+      "detector_id": "refactorToProtocolExtension",
+      "polarity": "negative",
+      "source_entity": "Lens.reading()",
+      "target_entity": "LensReading.calibrationCode()",
+      "rationale": "Unrelated helper is added; original implementation remains.",
+      "behavior_domain": "Deterministic inputs shown in sample().",
+      "before_sha": "7d9decdd50e9de6f573fbf7d67e5203c8d9a53e7",
+      "after_sha": "797fa339f2107ac0d3a94e6b3cb22ea525b70d17",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 0,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-5",
+        "after": "Sources/Fixture.swift:1-8"
+      },
+      "sha256": {
+        "before": "5cab97e4921d82188865504e1240a0034da9da0f77f6e2cf9a61ba0514668d6f",
+        "after": "564d9cff3ab85112f2302c0fac0966bb8343014fbf94b8f3c484ada0562c05e7"
+      },
+      "expectations": []
+    },
+    {
+      "case_id": "R3-P1",
+      "catalog_id": "R3",
+      "detector_id": "refactorToTypeExtension",
+      "polarity": "positive",
+      "source_entity": "SeedTray.cells()",
+      "target_entity": "SeedTray.cells() in extension SeedTray",
+      "rationale": "Same struct method moves into its extension.",
+      "behavior_domain": "Deterministic inputs shown in sample().",
+      "before_sha": "3ebd7c0994ebba4b0f90e594a56c434e4241c196",
+      "after_sha": "41faa46f70890a2b8b3d322e2795fffbfdbe14ca",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 1,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-5",
+        "after": "Sources/Fixture.swift:1-7"
+      },
+      "sha256": {
+        "before": "78659096fd619e2a9cdc13428753a8cafec47c56dc3d12e0f924cdfd1a6f3680",
+        "after": "c55b0719843e4d3d80b4e818a826cdeb3bfb9fa6cc3223331d6573f0aaa2e781"
+      },
+      "expectations": [
+        {
+          "expectation_id": "R3-P1-E1",
+          "detector_id": "refactorToTypeExtension",
+          "source_entity": "SeedTray.cells()",
+          "target_entity": "SeedTray.cells() in extension SeedTray",
+          "identity_policy": "Match full entity tuple with case, type, owner, member and parameter index as applicable; inspect raw payload locations. One-to-one; duplicate emissions are FP."
+        }
+      ]
+    },
+    {
+      "case_id": "R3-P2",
+      "catalog_id": "R3",
+      "detector_id": "refactorToTypeExtension",
+      "polarity": "positive",
+      "source_entity": "CopperSpool.length",
+      "target_entity": "CopperSpool.length in extension CopperSpool",
+      "rationale": "Class computed property moves into its extension.",
+      "behavior_domain": "Deterministic inputs shown in sample().",
+      "before_sha": "d23ecc96e9cc8ec8c1c9dd6e78060d60419f37af",
+      "after_sha": "a003a158f08954e7f6d3b50fcbfd5db4c4ea3cf8",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 1,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-4",
+        "after": "Sources/Fixture.swift:1-5"
+      },
+      "sha256": {
+        "before": "7cc8bbfe50b08ecd3daa1abc8d5123c28a5e7cb54da6b21f0e7fb6e99a1bef99",
+        "after": "e95b25d948194009c7fdb8fe74faa2872696a72e77d849d6192da999e16f5298"
+      },
+      "expectations": [
+        {
+          "expectation_id": "R3-P2-E1",
+          "detector_id": "refactorToTypeExtension",
+          "source_entity": "CopperSpool.length",
+          "target_entity": "CopperSpool.length in extension CopperSpool",
+          "identity_policy": "Match full entity tuple with case, type, owner, member and parameter index as applicable; inspect raw payload locations. One-to-one; duplicate emissions are FP."
+        }
+      ]
+    },
+    {
+      "case_id": "R3-P3",
+      "catalog_id": "R3",
+      "detector_id": "refactorToTypeExtension",
+      "polarity": "positive",
+      "source_entity": "Observatory.Dial.ticks(_:)",
+      "target_entity": "Observatory.Dial.ticks(_:) in extension Observatory.Dial",
+      "rationale": "Nested type method moves to correctly qualified extension; coverage stress case.",
+      "behavior_domain": "Deterministic inputs shown in sample().",
+      "before_sha": "3148eb9c689eeb46b70a8d6dd2046785ddfccc3f",
+      "after_sha": "98c3f771742bb8ab8ec046f4aa04fb86332b553e",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 1,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-6",
+        "after": "Sources/Fixture.swift:1-7"
+      },
+      "sha256": {
+        "before": "8d0f1385f2759c7fd3daee01ff7a5fbf8d2cfb07c613520cafe8cb1a5c3482f8",
+        "after": "9f66d2e56f027d81d52ddb0382f2210649254208dd7be61ec42e6534d234f5ef"
+      },
+      "expectations": [
+        {
+          "expectation_id": "R3-P3-E1",
+          "detector_id": "refactorToTypeExtension",
+          "source_entity": "Observatory.Dial.ticks(_:)",
+          "target_entity": "Observatory.Dial.ticks(_:) in extension Observatory.Dial",
+          "identity_policy": "Match full entity tuple with case, type, owner, member and parameter index as applicable; inspect raw payload locations. One-to-one; duplicate emissions are FP."
+        }
+      ]
+    },
+    {
+      "case_id": "R3-N1",
+      "catalog_id": "R3",
+      "detector_id": "refactorToTypeExtension",
+      "polarity": "negative",
+      "source_entity": "Loom.threads()",
+      "target_entity": "Loom.shuttleCode()",
+      "rationale": "Distinct helper added; no member moves.",
+      "behavior_domain": "Deterministic inputs shown in sample().",
+      "before_sha": "243d601d30793fc7410c81baad8b3aabf42c19b1",
+      "after_sha": "ef930a6534fad4d3a72ea2607ff14bb4fd36a72a",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 0,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-4",
+        "after": "Sources/Fixture.swift:1-7"
+      },
+      "sha256": {
+        "before": "5d3d6a3afe4d10fd19e26b71f77f08dabd7c5bc70aa9e4661c00180707c911f8",
+        "after": "2bb696d10fe39740ba50b9fb7c8aa6e41ecd25042809f3f9e95a1d27b67fc79d"
+      },
+      "expectations": []
+    },
+    {
+      "case_id": "R4-P1",
+      "catalog_id": "R4",
+      "detector_id": "refactorToEnumCasesWithParameters",
+      "polarity": "positive",
+      "source_entity": "DispatchNote",
+      "target_entity": "DispatchNote",
+      "rationale": "Payload-free message gains String payload; dictionary is removed.",
+      "behavior_domain": "Before payload contains text:String; after message carries corresponding String. Missing keys excluded.",
+      "before_sha": "637d6fc8a79b60d68898c9cef620156714c9ac5d",
+      "after_sha": "fbed4e2e7d928dbf43acd9abc322af37af149356",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 1,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-7",
+        "after": "Sources/Fixture.swift:1-7"
+      },
+      "sha256": {
+        "before": "2cac9225fb542b6304f196728f06f1c2de781f9e04391a26b47e91a4e527a731",
+        "after": "bfaca2b469e7007e143c2d21345db2dfab4d5616ec15b389a093d08eeb1d9656"
+      },
+      "expectations": [
+        {
+          "expectation_id": "R4-P1-E1",
+          "detector_id": "refactorToEnumCasesWithParameters",
+          "source_entity": "DispatchNote",
+          "target_entity": "DispatchNote",
+          "identity_policy": "Match full entity tuple with case, type, owner, member and parameter index as applicable; inspect raw payload locations. One-to-one; duplicate emissions are FP."
+        }
+      ]
+    },
+    {
+      "case_id": "R4-P2",
+      "catalog_id": "R4",
+      "detector_id": "refactorToEnumCasesWithParameters",
+      "polarity": "positive",
+      "source_entity": "InventoryNote",
+      "target_entity": "InventoryNote",
+      "rationale": "One case gains two payload fields with distinct types, replacing dictionary reads.",
+      "behavior_domain": "Before label:String and units:Int must exist and have those types; after carries corresponding typed values.",
+      "before_sha": "91c8d2593b60519d776ce2aaf10f27d224b4e7a1",
+      "after_sha": "ffba823c6a4468361f38540b4f6ae36a545fbf09",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 1,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-7",
+        "after": "Sources/Fixture.swift:1-7"
+      },
+      "sha256": {
+        "before": "5b172ca191928de871a19028f00ba4a64f3535a99e3273ea67c6b3f3820739a3",
+        "after": "7bcefa3319d55f1e930d2b960e8fa39395f2b99d101290a4bc6213b70b601371"
+      },
+      "expectations": [
+        {
+          "expectation_id": "R4-P2-E1",
+          "detector_id": "refactorToEnumCasesWithParameters",
+          "source_entity": "InventoryNote",
+          "target_entity": "InventoryNote",
+          "identity_policy": "Match full entity tuple with case, type, owner, member and parameter index as applicable; inspect raw payload locations. One-to-one; duplicate emissions are FP."
+        }
+      ]
+    },
+    {
+      "case_id": "R4-P3",
+      "catalog_id": "R4",
+      "detector_id": "refactorToEnumCasesWithParameters",
+      "polarity": "positive",
+      "source_entity": "CourierEvent",
+      "target_entity": "CourierEvent",
+      "rationale": "Two cases gain distinct payload layouts; expected detector instance is enum-level, count one.",
+      "behavior_domain": "arrived requires dock:String; delayed requires minutes:Int and reason:String. Corresponding typed payloads after.",
+      "before_sha": "55d7cb3236076c3c352ee1d1e27e1ed2d7f574fc",
+      "after_sha": "f2992da59ad118651dd4948bfff2a969e33c767e",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 1,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-10",
+        "after": "Sources/Fixture.swift:1-10"
+      },
+      "sha256": {
+        "before": "33d7a6d8f90f63f9824b1957c7aa02441cf83efffd57db4e2f478aa028e5aafb",
+        "after": "1135a7d0ed88ebc246f826c8203a6180f767193fe556df664ec4fccbd843357b"
+      },
+      "expectations": [
+        {
+          "expectation_id": "R4-P3-E1",
+          "detector_id": "refactorToEnumCasesWithParameters",
+          "source_entity": "CourierEvent",
+          "target_entity": "CourierEvent",
+          "identity_policy": "Match full entity tuple with case, type, owner, member and parameter index as applicable; inspect raw payload locations. One-to-one; duplicate emissions are FP."
+        }
+      ]
+    },
+    {
+      "case_id": "R4-N1",
+      "catalog_id": "R4",
+      "detector_id": "refactorToEnumCasesWithParameters",
+      "polarity": "negative",
+      "source_entity": "LockerMessage",
+      "target_entity": "LockerMessage",
+      "rationale": "Dictionary key changes consistently; enum cases remain payload-free.",
+      "behavior_domain": "Dictionary contains token before and access after, with the same String value.",
+      "before_sha": "e05dddaaba34899b42f964215259f31d803e0f69",
+      "after_sha": "388abec4d5945c074e4aef0987a7f4e14644d7d1",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 0,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-5",
+        "after": "Sources/Fixture.swift:1-5"
+      },
+      "sha256": {
+        "before": "5faad480a08479e588844c66404c08a2bcc0e7b459328c43f37df68067cd4e6b",
+        "after": "dfd729e64808bc3724a5f676c9bc0659f602708af4e8829f78a255e5f1651c3d"
+      },
+      "expectations": []
+    },
+    {
+      "case_id": "R5-P1",
+      "catalog_id": "R5",
+      "detector_id": "refactorToEnumExtension",
+      "polarity": "positive",
+      "source_entity": "GateState",
+      "target_entity": "GateState.permitsEntry",
+      "rationale": "Call-site enum comparisons replaced by computed Bool property; one enum-extension instance.",
+      "behavior_domain": "All three GateState cases; P1/P2 truth table false,true,false; P3 false,true,true. P2 indicator: wait,go,wait.",
+      "before_sha": "0e47e65609574fc0dcba98d2be5ad6d32eeda027",
+      "after_sha": "efc41111c68f4cfc18014cfe25d8f48925375936",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 1,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-3",
+        "after": "Sources/Fixture.swift:1-6"
+      },
+      "sha256": {
+        "before": "4c3c39514baa30264aafe060c1bf8a1777df81a94b369d2d409af4166896ee0c",
+        "after": "32821a23f8f263d87968ba226c8aaaacab3007538a364fb6797fcf0bd12bc857"
+      },
+      "expectations": [
+        {
+          "expectation_id": "R5-P1-E1",
+          "detector_id": "refactorToEnumExtension",
+          "source_entity": "GateState",
+          "target_entity": "GateState.permitsEntry",
+          "identity_policy": "Match full entity tuple with case, type, owner, member and parameter index as applicable; inspect raw payload locations. One-to-one; duplicate emissions are FP."
+        }
+      ]
+    },
+    {
+      "case_id": "R5-P2",
+      "catalog_id": "R5",
+      "detector_id": "refactorToEnumExtension",
+      "polarity": "positive",
+      "source_entity": "GateState",
+      "target_entity": "GateState.permitsEntry",
+      "rationale": "Call-site enum comparisons replaced by computed Bool property; one enum-extension instance.",
+      "behavior_domain": "All three GateState cases; P1/P2 truth table false,true,false; P3 false,true,true. P2 indicator: wait,go,wait.",
+      "before_sha": "885a86c92b973a372d3b6676a81ee4fe0bffc060",
+      "after_sha": "8c0ea141576d4689718b24f6e989b423dd5e7df2",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 1,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-4",
+        "after": "Sources/Fixture.swift:1-7"
+      },
+      "sha256": {
+        "before": "50a97952c7cf69569794e2191ea7b06280e602fc4d204a13c699c69c1b56106f",
+        "after": "392b50308a003b1211ac28502e3e0cd6180397ae58940b21759dfef97a5f9ca7"
+      },
+      "expectations": [
+        {
+          "expectation_id": "R5-P2-E1",
+          "detector_id": "refactorToEnumExtension",
+          "source_entity": "GateState",
+          "target_entity": "GateState.permitsEntry",
+          "identity_policy": "Match full entity tuple with case, type, owner, member and parameter index as applicable; inspect raw payload locations. One-to-one; duplicate emissions are FP."
+        }
+      ]
+    },
+    {
+      "case_id": "R5-P3",
+      "catalog_id": "R5",
+      "detector_id": "refactorToEnumExtension",
+      "polarity": "positive",
+      "source_entity": "GateState",
+      "target_entity": "GateState.permitsEntry",
+      "rationale": "Call-site enum comparisons replaced by computed Bool property; one enum-extension instance.",
+      "behavior_domain": "All three GateState cases; P1/P2 truth table false,true,false; P3 false,true,true. P2 indicator: wait,go,wait.",
+      "before_sha": "5998a3ee87791501343adcf261eb629d9b1744d8",
+      "after_sha": "5ba4db461f05edf8980eb0c270104b1c15bb59d3",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 1,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-3",
+        "after": "Sources/Fixture.swift:1-11"
+      },
+      "sha256": {
+        "before": "6b3772d8c7dcfa1a7de9d764a9ac720fe0690b1b32262091ea5539a85c379ba9",
+        "after": "39b1850e8cb34b0b1d5c7180302c4772a2e09a51820152bdab4378b46125abb2"
+      },
+      "expectations": [
+        {
+          "expectation_id": "R5-P3-E1",
+          "detector_id": "refactorToEnumExtension",
+          "source_entity": "GateState",
+          "target_entity": "GateState.permitsEntry",
+          "identity_policy": "Match full entity tuple with case, type, owner, member and parameter index as applicable; inspect raw payload locations. One-to-one; duplicate emissions are FP."
+        }
+      ]
+    },
+    {
+      "case_id": "R5-N1",
+      "catalog_id": "R5",
+      "detector_id": "refactorToEnumExtension",
+      "polarity": "negative",
+      "source_entity": "GateState",
+      "target_entity": "GateState.permitsEntry",
+      "rationale": "Unused added property; comparisons retained.",
+      "behavior_domain": "All three GateState cases; P1/P2 truth table false,true,false; P3 false,true,true. P2 indicator: wait,go,wait.",
+      "before_sha": "89f3cc956927b88a7af9924fd9e272b73ee322a7",
+      "after_sha": "c53158afbc0f20e69d2cfc2321a1918fdf62fc85",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 0,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-3",
+        "after": "Sources/Fixture.swift:1-6"
+      },
+      "sha256": {
+        "before": "4c3c39514baa30264aafe060c1bf8a1777df81a94b369d2d409af4166896ee0c",
+        "after": "51617a254cca6c148ad9011331ef9573bb92e53585796d92ac54d93ff25b8221"
+      },
+      "expectations": []
+    },
+    {
+      "case_id": "R6-P1",
+      "catalog_id": "R6",
+      "detector_id": "protocolRename",
+      "polarity": "positive",
+      "source_entity": "RouteCounting",
+      "target_entity": "SegmentCounting",
+      "rationale": "Protocol rename preserves requirements and updates all conformance/client references.",
+      "behavior_domain": "Deterministic inputs shown in sample().",
+      "before_sha": "e477a626a73badf3c2ddcf3368ea939e73072e70",
+      "after_sha": "e166c62fbf908acbdeac00aa197a4cb3621dcbe4",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 1,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-5",
+        "after": "Sources/Fixture.swift:1-5"
+      },
+      "sha256": {
+        "before": "4b8267d62d19adb84e32759faad184cb0a0e82602c2f76e7941d115f5641556e",
+        "after": "dc678a9aa9878e9fc78128cff71921e271fadc7d2615c2cd5ae90c2d8f7ac6fd"
+      },
+      "expectations": [
+        {
+          "expectation_id": "R6-P1-E1",
+          "detector_id": "protocolRename",
+          "source_entity": "RouteCounting",
+          "target_entity": "SegmentCounting",
+          "identity_policy": "Match full entity tuple with case, type, owner, member and parameter index as applicable; inspect raw payload locations. One-to-one; duplicate emissions are FP."
+        }
+      ]
+    },
+    {
+      "case_id": "R6-P2",
+      "catalog_id": "R6",
+      "detector_id": "protocolRename",
+      "polarity": "positive",
+      "source_entity": "RouteCounting",
+      "target_entity": "SegmentCounting",
+      "rationale": "Protocol rename preserves requirements and updates all conformance/client references.",
+      "behavior_domain": "Deterministic inputs shown in sample().",
+      "before_sha": "55fe3ba6b02b16f70829b88b878a12520155e2e0",
+      "after_sha": "2431e40f85b5e1a930df665dacfbd1cb258d0271",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 1,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-6",
+        "after": "Sources/Fixture.swift:1-6"
+      },
+      "sha256": {
+        "before": "fece58fa1997aee288f93506d47bbd31936ad20e19518692ec806c8b2ce910b3",
+        "after": "9e98e5be0a0bf441a789e3ea2232d66fece54fc2e1cabb889cf04ac067062743"
+      },
+      "expectations": [
+        {
+          "expectation_id": "R6-P2-E1",
+          "detector_id": "protocolRename",
+          "source_entity": "RouteCounting",
+          "target_entity": "SegmentCounting",
+          "identity_policy": "Match full entity tuple with case, type, owner, member and parameter index as applicable; inspect raw payload locations. One-to-one; duplicate emissions are FP."
+        }
+      ]
+    },
+    {
+      "case_id": "R6-P3",
+      "catalog_id": "R6",
+      "detector_id": "protocolRename",
+      "polarity": "positive",
+      "source_entity": "RouteCounting",
+      "target_entity": "SegmentCounting",
+      "rationale": "Protocol rename preserves requirements and updates all conformance/client references.",
+      "behavior_domain": "Deterministic inputs shown in sample().",
+      "before_sha": "dbc45ccc03c6c0c13a98cdd3a490e0b8a0110ce5",
+      "after_sha": "7879cb572399b7b25836722e17f68c85c208ea25",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 1,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-6",
+        "after": "Sources/Fixture.swift:1-6"
+      },
+      "sha256": {
+        "before": "770d20e81cb262a7855c7d60f755294ac8afb9cad4b09955f9b9f0ba3ad64d80",
+        "after": "f8c5f2e9707c7873821b077d7e4e357506b2c6fba4d350df87eb5262987cfd72"
+      },
+      "expectations": [
+        {
+          "expectation_id": "R6-P3-E1",
+          "detector_id": "protocolRename",
+          "source_entity": "RouteCounting",
+          "target_entity": "SegmentCounting",
+          "identity_policy": "Match full entity tuple with case, type, owner, member and parameter index as applicable; inspect raw payload locations. One-to-one; duplicate emissions are FP."
+        }
+      ]
+    },
+    {
+      "case_id": "R6-N1",
+      "catalog_id": "R6",
+      "detector_id": "protocolRename",
+      "polarity": "negative",
+      "source_entity": "RouteCounting",
+      "target_entity": "RouteCounting",
+      "rationale": "Only conformer body changes; protocol identity unchanged.",
+      "behavior_domain": "Deterministic inputs shown in sample().",
+      "before_sha": "9783f1a13b456b9661653395a9596bf4e8cb170f",
+      "after_sha": "c67b9364306b6402e7406dfd78dd5b353fcdb8c3",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 0,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-5",
+        "after": "Sources/Fixture.swift:1-5"
+      },
+      "sha256": {
+        "before": "4b8267d62d19adb84e32759faad184cb0a0e82602c2f76e7941d115f5641556e",
+        "after": "888499d9c955c78f205a2b5db3378027bd3c94b3f61f36c99691a1b756b7b9ee"
+      },
+      "expectations": []
+    },
+    {
+      "case_id": "R7-P1",
+      "catalog_id": "R7",
+      "detector_id": "safeUnwrapOptional",
+      "polarity": "positive",
+      "source_entity": "tariff(_:)",
+      "target_entity": "tariff(_:)",
+      "rationale": "Force unwrap replaced by guard binding of same optional.",
+      "behavior_domain": "Non-nil Int inputs avoiding overflow. Nil returns 0 after; before would trap.",
+      "before_sha": "8bc090d0d0bcea4233dc20310f9c2d7227490bb9",
+      "after_sha": "65f7e660a6fde44b1216f43f42ca68846cb77b9b",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 1,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-2",
+        "after": "Sources/Fixture.swift:1-5"
+      },
+      "sha256": {
+        "before": "d92fb8d57ca720577c2b128ae9d7155900f5024b22812dd70def34e451598f71",
+        "after": "0d1a0e2533379ebf287ad4b6d32c99993b173aa5252ee31ab76730e02e436281"
+      },
+      "expectations": [
+        {
+          "expectation_id": "R7-P1-E1",
+          "detector_id": "safeUnwrapOptional",
+          "source_entity": "tariff(_:)",
+          "target_entity": "tariff(_:)",
+          "identity_policy": "Match full entity tuple with case, type, owner, member and parameter index as applicable; inspect raw payload locations. One-to-one; duplicate emissions are FP."
+        }
+      ]
+    },
+    {
+      "case_id": "R7-P2",
+      "catalog_id": "R7",
+      "detector_id": "safeUnwrapOptional",
+      "polarity": "positive",
+      "source_entity": "alert(_:)",
+      "target_entity": "alert(_:)",
+      "rationale": "Force unwraps replaced by if-let in conditional computation.",
+      "behavior_domain": "Non-nil Int inputs avoiding overflow. Nil returns 0 after; before would trap.",
+      "before_sha": "9f2ec7c854786c7692b03b746bb6cdfd815d0bae",
+      "after_sha": "04497c6ec26dc10f707cc3810d1b530741bfa2e5",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 1,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-5",
+        "after": "Sources/Fixture.swift:1-7"
+      },
+      "sha256": {
+        "before": "5fc504e7aa1af2ce45bc87453e37378f72601c37c31f701cdc8b82403d814542",
+        "after": "eeb90707d45534220504b3c5e82494a7c502b34453cbb66352b8f45035505046"
+      },
+      "expectations": [
+        {
+          "expectation_id": "R7-P2-E1",
+          "detector_id": "safeUnwrapOptional",
+          "source_entity": "alert(_:)",
+          "target_entity": "alert(_:)",
+          "identity_policy": "Match full entity tuple with case, type, owner, member and parameter index as applicable; inspect raw payload locations. One-to-one; duplicate emissions are FP."
+        }
+      ]
+    },
+    {
+      "case_id": "R7-P3",
+      "catalog_id": "R7",
+      "detector_id": "safeUnwrapOptional",
+      "polarity": "positive",
+      "source_entity": "spread(_:)",
+      "target_entity": "spread(_:)",
+      "rationale": "Multiple uses replaced by single binding; one function-level instance.",
+      "behavior_domain": "Non-nil Int inputs avoiding overflow. Nil returns 0 after; before would trap.",
+      "before_sha": "1d4ebfa670eacbb12783b25b51fbc58f223506a4",
+      "after_sha": "83c3492b2f0945c10110f620502d472c15df44b0",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 1,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-2",
+        "after": "Sources/Fixture.swift:1-5"
+      },
+      "sha256": {
+        "before": "57335b294930eeb04ed9172e853cdd79409fb8999d07bf7b061c90c9d9bdcd3b",
+        "after": "6e68bf2697c7c3f5e752ba0f7e9c676a31e7bdeb0015db05ec597d91bda00cc1"
+      },
+      "expectations": [
+        {
+          "expectation_id": "R7-P3-E1",
+          "detector_id": "safeUnwrapOptional",
+          "source_entity": "spread(_:)",
+          "target_entity": "spread(_:)",
+          "identity_policy": "Match full entity tuple with case, type, owner, member and parameter index as applicable; inspect raw payload locations. One-to-one; duplicate emissions are FP."
+        }
+      ]
+    },
+    {
+      "case_id": "R7-N1",
+      "catalog_id": "R7",
+      "detector_id": "safeUnwrapOptional",
+      "polarity": "negative",
+      "source_entity": "discount(_:)",
+      "target_entity": "discount(_:)",
+      "rationale": "Arithmetic changes but force unwrap remains and no binding is added.",
+      "behavior_domain": "Non-nil Int inputs avoiding overflow; negative intentionally changes output.",
+      "before_sha": "c76ef22c3fb982ec86b49f3bfd038c8bf62fc63e",
+      "after_sha": "fbff281fdfb61c8300f29cd1210047bb7d659bee",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 0,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-2",
+        "after": "Sources/Fixture.swift:1-2"
+      },
+      "sha256": {
+        "before": "13f0b9af39d6a53318d611d96fb76dd6466135c66b0b988ab7ce200f4a962d7c",
+        "after": "64ecd963a8ada2fa0a978ee75a9c4ab5b9f5872bcc2720817106106d6d737ec4"
+      },
+      "expectations": []
+    },
+    {
+      "case_id": "R8-P1",
+      "catalog_id": "R8",
+      "detector_id": "introduceDefer",
+      "polarity": "positive",
+      "source_entity": "visit(_:)",
+      "target_entity": "visit(_:)",
+      "rationale": "Cleanup moves to defer preserving event order; one function-level instance.",
+      "behavior_domain": "P1: acquire,work,release; P3: acquire,work,flush,release. N1 adds inspect after acquire.",
+      "before_sha": "a995d78377e4ce766420846d8e074f15058b6422",
+      "after_sha": "19a100f58cedbc61407842a0b7f72780093f9393",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 1,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-14",
+        "after": "Sources/Fixture.swift:1-14"
+      },
+      "sha256": {
+        "before": "fc5353c01695e87dd03b0d92b65105a65a757d75e7a2af49ece8d54c35735407",
+        "after": "c37c9fc2672c3e09b941a5c26685cec7efdfda587cd34089f79b628308eacfe9"
+      },
+      "expectations": [
+        {
+          "expectation_id": "R8-P1-E1",
+          "detector_id": "introduceDefer",
+          "source_entity": "visit(_:)",
+          "target_entity": "visit(_:)",
+          "identity_policy": "Match full entity tuple with case, type, owner, member and parameter index as applicable; inspect raw payload locations. One-to-one; duplicate emissions are FP."
+        }
+      ]
+    },
+    {
+      "case_id": "R8-P2",
+      "catalog_id": "R8",
+      "detector_id": "introduceDefer",
+      "polarity": "positive",
+      "source_entity": "visit(_:early:)",
+      "target_entity": "visit(_:early:)",
+      "rationale": "Cleanup moves to defer preserving event order; one function-level instance.",
+      "behavior_domain": "early=true: acquire,release; early=false: acquire,work,release. Exactly one release.",
+      "before_sha": "b3ab32e19ceb1760c1bf4f380fe38930b4b64227",
+      "after_sha": "94fdedf3724c546aaa275e5d7e9b60ea4d6db154",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 1,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-18",
+        "after": "Sources/Fixture.swift:1-15"
+      },
+      "sha256": {
+        "before": "252b3f6456ebca4ef757dc9627b32436c08975870bd1b2d280619a4d17459f7c",
+        "after": "e4c2f0c2e924000f09667ed62d0d0e00d051342d1eb18d3e6943d28a1e4bbf03"
+      },
+      "expectations": [
+        {
+          "expectation_id": "R8-P2-E1",
+          "detector_id": "introduceDefer",
+          "source_entity": "visit(_:early:)",
+          "target_entity": "visit(_:early:)",
+          "identity_policy": "Match full entity tuple with case, type, owner, member and parameter index as applicable; inspect raw payload locations. One-to-one; duplicate emissions are FP."
+        }
+      ]
+    },
+    {
+      "case_id": "R8-P3",
+      "catalog_id": "R8",
+      "detector_id": "introduceDefer",
+      "polarity": "positive",
+      "source_entity": "visit(_:)",
+      "target_entity": "visit(_:)",
+      "rationale": "Cleanup moves to defer preserving event order; one function-level instance.",
+      "behavior_domain": "P1: acquire,work,release; P3: acquire,work,flush,release. N1 adds inspect after acquire.",
+      "before_sha": "27b635c55de70af4add52845a6ebe70f574f7b0b",
+      "after_sha": "f6cd09058f908760e35b53652746b4c3ff9b8d76",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 1,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-15",
+        "after": "Sources/Fixture.swift:1-17"
+      },
+      "sha256": {
+        "before": "d4d9eac2572935054034c2ff826d66aafa557747de9365cd84d61f7350dd25c1",
+        "after": "115720dac177cdc970be96ca4bbe36d43aff5d54049742cf0c9ebf17e74b5535"
+      },
+      "expectations": [
+        {
+          "expectation_id": "R8-P3-E1",
+          "detector_id": "introduceDefer",
+          "source_entity": "visit(_:)",
+          "target_entity": "visit(_:)",
+          "identity_policy": "Match full entity tuple with case, type, owner, member and parameter index as applicable; inspect raw payload locations. One-to-one; duplicate emissions are FP."
+        }
+      ]
+    },
+    {
+      "case_id": "R8-N1",
+      "catalog_id": "R8",
+      "detector_id": "introduceDefer",
+      "polarity": "negative",
+      "source_entity": "visit(_:)",
+      "target_entity": "visit(_:)",
+      "rationale": "Extra event introduced; cleanup stays outside defer.",
+      "behavior_domain": "P1: acquire,work,release; P3: acquire,work,flush,release. N1 adds inspect after acquire.",
+      "before_sha": "7cacfeebc1f0446ce295413c6fcd4f6c362797a6",
+      "after_sha": "05ce514325610babe632219067ee5d71dd1edcdd",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 0,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-14",
+        "after": "Sources/Fixture.swift:1-15"
+      },
+      "sha256": {
+        "before": "fc5353c01695e87dd03b0d92b65105a65a757d75e7a2af49ece8d54c35735407",
+        "after": "72fa4b7e402eaf5d5df0d1db63144a1a0355a8011ee6f20fd424de10749a2fe3"
+      },
+      "expectations": []
+    },
+    {
+      "case_id": "R9-P1",
+      "catalog_id": "R9",
+      "detector_id": "nameFunctionParameter",
+      "polarity": "positive",
+      "source_entity": "credits(_:).parameter[0]",
+      "target_entity": "credits(amount:).parameter[0]",
+      "rationale": "Suppressed external label becomes amount; internal name and body unchanged.",
+      "behavior_domain": "Deterministic inputs shown in sample().",
+      "before_sha": "995cd4e9da730f2c00fe6ab036fb18dce25b514d",
+      "after_sha": "59c2fe04e4f287ebe1aadcd46f54c57b02332317",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 1,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-2",
+        "after": "Sources/Fixture.swift:1-2"
+      },
+      "sha256": {
+        "before": "965abe8697bbd0979de75c0ea13f256cf8e6f2d70a9749321b01bd48b9fb887b",
+        "after": "684a9595f9c06529a36f03e303ee8db867280e0271ce88c5c536600338ea76aa"
+      },
+      "expectations": [
+        {
+          "expectation_id": "R9-P1-E1",
+          "detector_id": "nameFunctionParameter",
+          "source_entity": "credits(_:).parameter[0]",
+          "target_entity": "credits(amount:).parameter[0]",
+          "identity_policy": "Match full entity tuple with case, type, owner, member and parameter index as applicable; inspect raw payload locations. One-to-one; duplicate emissions are FP."
+        }
+      ]
+    },
+    {
+      "case_id": "R9-P2",
+      "catalog_id": "R9",
+      "detector_id": "nameFunctionParameter",
+      "polarity": "positive",
+      "source_entity": "quota(units:).parameter[0]",
+      "target_entity": "quota(amount:).parameter[0]",
+      "rationale": "Concrete external label changes; internal name and body unchanged.",
+      "behavior_domain": "Deterministic inputs shown in sample().",
+      "before_sha": "225395879c1b1a71acead675476bc1917705849c",
+      "after_sha": "511204260d12e35acee149a4c8b71c38d6c0b9a3",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 1,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-2",
+        "after": "Sources/Fixture.swift:1-2"
+      },
+      "sha256": {
+        "before": "5f81d9a217e5df6a14a7c4ff5b8f8eda8a437ff762a3b64566752e6bf081f582",
+        "after": "105a15860dbb3204ccace0b318785b89afe42775562f69d6ca7d5d08d1419547"
+      },
+      "expectations": [
+        {
+          "expectation_id": "R9-P2-E1",
+          "detector_id": "nameFunctionParameter",
+          "source_entity": "quota(units:).parameter[0]",
+          "target_entity": "quota(amount:).parameter[0]",
+          "identity_policy": "Match full entity tuple with case, type, owner, member and parameter index as applicable; inspect raw payload locations. One-to-one; duplicate emissions are FP."
+        }
+      ]
+    },
+    {
+      "case_id": "R9-P3",
+      "catalog_id": "R9",
+      "detector_id": "nameFunctionParameter",
+      "polarity": "positive",
+      "source_entity": "TileEstimator.tiles(_:rows:).parameter[0]",
+      "target_entity": "TileEstimator.tiles(columns:rows:).parameter[0]",
+      "rationale": "One external label added on multi-parameter instance method.",
+      "behavior_domain": "Deterministic inputs shown in sample().",
+      "before_sha": "cbd5cc3554e6bf2c402bd4eb93bc53d4350a4702",
+      "after_sha": "87f6b9053d91a93ed0f4c658998a756bbd928ffb",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 1,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-4",
+        "after": "Sources/Fixture.swift:1-4"
+      },
+      "sha256": {
+        "before": "8494436f90fe8f3821cbe02d14a426a30bf3e7e59a88e2e446490202cc93007b",
+        "after": "88e5d28fb15c272a2ec8ae2c60d27dc5ea6cfe955b54e52f8dbced9ffe9d41ff"
+      },
+      "expectations": [
+        {
+          "expectation_id": "R9-P3-E1",
+          "detector_id": "nameFunctionParameter",
+          "source_entity": "TileEstimator.tiles(_:rows:).parameter[0]",
+          "target_entity": "TileEstimator.tiles(columns:rows:).parameter[0]",
+          "identity_policy": "Match full entity tuple with case, type, owner, member and parameter index as applicable; inspect raw payload locations. One-to-one; duplicate emissions are FP."
+        }
+      ]
+    },
+    {
+      "case_id": "R9-N1",
+      "catalog_id": "R9",
+      "detector_id": "nameFunctionParameter",
+      "polarity": "negative",
+      "source_entity": "reserve(amount:).parameter[0]",
+      "target_entity": "reserve(amount:).parameter[0]",
+      "rationale": "Only internal name and body references change; external label retained.",
+      "behavior_domain": "Deterministic inputs shown in sample().",
+      "before_sha": "5a06fc928561e7d3172e108018f4d6928e19442c",
+      "after_sha": "7cc9e118568ac1f58661ef1ed6506e78cc7d09eb",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 0,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-2",
+        "after": "Sources/Fixture.swift:1-2"
+      },
+      "sha256": {
+        "before": "6396ef109d4d90083355c91226af7753d279a104884084bcfe8215c59704f8d8",
+        "after": "33ca40a07aa51151d602752ae7d94090762aac15ff053ac18c37526c548137a8"
+      },
+      "expectations": []
+    },
+    {
+      "case_id": "R10-P1",
+      "catalog_id": "R10",
+      "detector_id": "makeParameterNameOptional",
+      "polarity": "positive",
+      "source_entity": "stamp(amount:).parameter[0]",
+      "target_entity": "stamp(_:).parameter[0]",
+      "rationale": "Concrete external label removed; internal name, type, body unchanged.",
+      "behavior_domain": "Deterministic inputs shown in sample().",
+      "before_sha": "979d12f8cc35b787986fda770e2c5492c754a0db",
+      "after_sha": "ce0e398240a7384a39c7f7de2d07b506d6d4a0c5",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 1,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-2",
+        "after": "Sources/Fixture.swift:1-2"
+      },
+      "sha256": {
+        "before": "b231d7e7c7c96309251910a540b2544e33f5f33c2e24ae02606dbaeeccecfa9e",
+        "after": "d78ad272555e8555c123e37758b68faceab8595a9c118cf410955f2051211741"
+      },
+      "expectations": [
+        {
+          "expectation_id": "R10-P1-E1",
+          "detector_id": "makeParameterNameOptional",
+          "source_entity": "stamp(amount:).parameter[0]",
+          "target_entity": "stamp(_:).parameter[0]",
+          "identity_policy": "Match full entity tuple with case, type, owner, member and parameter index as applicable; inspect raw payload locations. One-to-one; duplicate emissions are FP."
+        }
+      ]
+    },
+    {
+      "case_id": "R10-P2",
+      "catalog_id": "R10",
+      "detector_id": "makeParameterNameOptional",
+      "polarity": "positive",
+      "source_entity": "postage(weight:zones:).parameter[0]",
+      "target_entity": "postage(_:zones:).parameter[0]",
+      "rationale": "One label removed from multi-parameter function.",
+      "behavior_domain": "Deterministic inputs shown in sample().",
+      "before_sha": "b9af9ff0a7f3beffd5259759289bc0741ba87d9f",
+      "after_sha": "846b8c82b439322ac36aea9753fe99bfc1f7c31c",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 1,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-2",
+        "after": "Sources/Fixture.swift:1-2"
+      },
+      "sha256": {
+        "before": "6c54610cdfe5f243deffb9bd4f439fab1a4180e0a20943596b49aec6fa834e98",
+        "after": "71a14cb9e269c8aba5366b8144da4f90afcd7c7d8f39fe52d80e9630fb055066"
+      },
+      "expectations": [
+        {
+          "expectation_id": "R10-P2-E1",
+          "detector_id": "makeParameterNameOptional",
+          "source_entity": "postage(weight:zones:).parameter[0]",
+          "target_entity": "postage(_:zones:).parameter[0]",
+          "identity_policy": "Match full entity tuple with case, type, owner, member and parameter index as applicable; inspect raw payload locations. One-to-one; duplicate emissions are FP."
+        }
+      ]
+    },
+    {
+      "case_id": "R10-P3",
+      "catalog_id": "R10",
+      "detector_id": "makeParameterNameOptional",
+      "polarity": "positive",
+      "source_entity": "VoucherMath.redeem(points:).parameter[0]",
+      "target_entity": "VoucherMath.redeem(_:).parameter[0]",
+      "rationale": "External label removed from static method; body unchanged.",
+      "behavior_domain": "Deterministic inputs shown in sample().",
+      "before_sha": "c3eeae1dbffd9e18eb879b8277620f93ab1d08ee",
+      "after_sha": "172acdbcfd5098c7216f822380fdaa55cf48cf7b",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 1,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-4",
+        "after": "Sources/Fixture.swift:1-4"
+      },
+      "sha256": {
+        "before": "cae18e78a81fcb1fd560905bf8fac3cb2768900c0843ad57e4594d38936ea66c",
+        "after": "4180183275d8f9cafb3e2357b8c20eed1cd88d57753fbaec2c7af7d5867d5302"
+      },
+      "expectations": [
+        {
+          "expectation_id": "R10-P3-E1",
+          "detector_id": "makeParameterNameOptional",
+          "source_entity": "VoucherMath.redeem(points:).parameter[0]",
+          "target_entity": "VoucherMath.redeem(_:).parameter[0]",
+          "identity_policy": "Match full entity tuple with case, type, owner, member and parameter index as applicable; inspect raw payload locations. One-to-one; duplicate emissions are FP."
+        }
+      ]
+    },
+    {
+      "case_id": "R10-N1",
+      "catalog_id": "R10",
+      "detector_id": "makeParameterNameOptional",
+      "polarity": "negative",
+      "source_entity": "freight(weight:).parameter[0]",
+      "target_entity": "freight(weight:).parameter[0]",
+      "rationale": "Parameter type changes with compatible caller; external label retained.",
+      "behavior_domain": "Integral sample 6 and 6.0; type change is outside the ten catalog types.",
+      "before_sha": "0f45b843a506e70e9a9bccd9b9a8f0769ba8e3b8",
+      "after_sha": "fa522ef65fcfdc82369afa483d6316432b006582",
+      "source_file": "Sources/Fixture.swift",
+      "target_file": "Sources/Fixture.swift",
+      "expected_instance_count": 0,
+      "locations": {
+        "before": "Sources/Fixture.swift:1-2",
+        "after": "Sources/Fixture.swift:1-2"
+      },
+      "sha256": {
+        "before": "24c9bd965cdc6b100ba70f5051bb655ea7d8fab173f4bf1bfed27f2088474d32",
+        "after": "7ee2a5b971f0bd48355232f678326a18fa22251dec11d76e1319c1f04f130a12"
+      },
+      "expectations": []
+    }
+  ]
+}
