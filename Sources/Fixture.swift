@@ -1,7 +1,7 @@
-enum DispatchNote { case message }
-func render(_ note: DispatchNote, payload: [String: String]) -> String {
+enum DispatchNote { case message(String) }
+func render(_ note: DispatchNote) -> String {
     switch note {
-    case .message: return payload["text"]!
+    case .message(let text): return text
     }
 }
-func sample() -> String { render(.message, payload: ["text": "dock-open"]) }
+func sample() -> String { render(.message("dock-open")) }
