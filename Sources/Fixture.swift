@@ -4,6 +4,8 @@ protocol CrateSizing {
 }
 struct Crate: CrateSizing {
     let width: Int
+}
+extension CrateSizing {
     var doubledWidth: Int { width * 2 }
 }
 func sample() -> Int { Crate(width: 11).doubledWidth }
