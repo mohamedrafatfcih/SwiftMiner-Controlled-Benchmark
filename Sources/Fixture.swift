@@ -1,6 +1,6 @@
-protocol RouteCounting { func count(_ segments: Int) -> Int }
-struct RouteCounter: RouteCounting {
+protocol SegmentCounting { func count(_ segments: Int) -> Int }
+struct RouteCounter: SegmentCounting {
     func count(_ segments: Int) -> Int { segments * 3 }
 }
-func total(_ counter: any RouteCounting) -> Int { counter.count(4) }
+func total(_ counter: any SegmentCounting) -> Int { counter.count(4) }
 func sample() -> Int { total(RouteCounter()) }
