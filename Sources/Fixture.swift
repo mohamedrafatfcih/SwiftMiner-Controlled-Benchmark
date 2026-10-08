@@ -1,1 +1,2 @@
-// Independent evaluation fixture is added on each case branch.
+func spread(_ value: Int?) -> Int { value! * 2 + value! }
+func sample() -> Int { spread(7) }
