@@ -1,2 +1,2 @@
-func quota(units value: Int) -> Int { value + 13 }
-func sample() -> Int { quota(units: 4) }
+func quota(amount value: Int) -> Int { value + 13 }
+func sample() -> Int { quota(amount: 4) }
