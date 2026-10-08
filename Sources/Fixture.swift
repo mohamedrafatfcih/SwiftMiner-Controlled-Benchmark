@@ -1,2 +1,2 @@
-func postage(weight value: Int, zones: Int) -> Int { value * zones }
-func sample() -> Int { postage(weight: 5, zones: 2) }
+func postage(_ value: Int, zones: Int) -> Int { value * zones }
+func sample() -> Int { postage(5, zones: 2) }
