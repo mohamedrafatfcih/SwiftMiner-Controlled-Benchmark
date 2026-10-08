@@ -1,3 +1,6 @@
+protocol WeightReporting {
+    func weight(_ pieces: Int) -> Int
+}
 struct ParcelScale {
     func weight(_ pieces: Int) -> Int { pieces * 5 }
 }
