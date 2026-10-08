@@ -4,9 +4,11 @@ final class EventLog {
 }
 func visit(_ log: EventLog) {
     log.record("acquire")
+    defer {
+        log.record("flush")
+        log.record("release")
+    }
     log.record("work")
-    log.record("flush")
-    log.record("release")
 }
 func sample() -> [String] {
     let log = EventLog()
