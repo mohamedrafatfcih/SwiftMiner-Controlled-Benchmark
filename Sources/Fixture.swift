@@ -4,6 +4,7 @@ final class EventLog {
 }
 func visit(_ log: EventLog) {
     log.record("acquire")
+    log.record("inspect")
     log.record("work")
     log.record("release")
 }
