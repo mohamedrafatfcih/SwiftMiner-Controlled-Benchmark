@@ -1,7 +1,7 @@
-enum InventoryNote { case stock }
-func describe(_ note: InventoryNote, payload: [String: Any]) -> String {
+enum InventoryNote { case stock(label: String, units: Int) }
+func describe(_ note: InventoryNote) -> String {
     switch note {
-    case .stock: return "\(payload["label"] as! String):\(payload["units"] as! Int)"
+    case .stock(let label, let units): return "\(label):\(units)"
     }
 }
-func sample() -> String { describe(.stock, payload: ["label": "bolts", "units": 12]) }
+func sample() -> String { describe(.stock(label: "bolts", units: 12)) }
