@@ -1,1 +1,4 @@
-// Independent evaluation fixture is added on each case branch.
+final class CopperSpool {
+    var length: Int { 15 }
+}
+func sample() -> Int { CopperSpool().length }
