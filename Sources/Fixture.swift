@@ -1,3 +1,6 @@
 enum GateState { case sealed, open, jammed }
-func admit(_ state: GateState) -> Bool { state == .open }
+extension GateState {
+    var permitsEntry: Bool { self == .open }
+}
+func admit(_ state: GateState) -> Bool { state.permitsEntry }
 func sample() -> [Bool] { [admit(.sealed), admit(.open), admit(.jammed)] }
