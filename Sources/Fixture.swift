@@ -1,1 +1,2 @@
-// Independent evaluation fixture is added on each case branch.
+func tariff(_ value: Int?) -> Int { value! * 6 }
+func sample() -> Int { tariff(5) }
