@@ -1,1 +1,4 @@
-// Independent evaluation fixture is added on each case branch.
+struct Loom {
+    func threads() -> Int { 30 }
+}
+func sample() -> Int { Loom().threads() }
