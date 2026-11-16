@@ -1,0 +1,302 @@
+[
+  {
+    "case_id": "R1-P1",
+    "expectation_id": "R1-P1-E1",
+    "output_record_id": "R1-P1#1",
+    "detector_id": "refactorToProtocol",
+    "classification": "TP",
+    "reason": "Type and source/target entity tuple reviewed against frozen oracle and pair source; payload identity assertions passed.",
+    "raw_output": "raw/R1-P1.json",
+    "reviewer": "Automated payload identity checks; not independent human review."
+  },
+  {
+    "case_id": "R1-P2",
+    "expectation_id": "R1-P2-E1",
+    "output_record_id": "R1-P2#1",
+    "detector_id": "refactorToProtocol",
+    "classification": "TP",
+    "reason": "Type and source/target entity tuple reviewed against frozen oracle and pair source; payload identity assertions passed.",
+    "raw_output": "raw/R1-P2.json",
+    "reviewer": "Automated payload identity checks; not independent human review."
+  },
+  {
+    "case_id": "R1-P3",
+    "expectation_id": "R1-P3-E1",
+    "output_record_id": null,
+    "detector_id": "refactorToProtocol",
+    "classification": "FN",
+    "reason": "Nested conforming type with two protocol requirements emitted no catalog instance.",
+    "raw_output": "raw/R1-P3.json",
+    "reviewer": "Automated payload identity checks; not independent human review."
+  },
+  {
+    "case_id": "R2-P1",
+    "expectation_id": "R2-P1-E1",
+    "output_record_id": "R2-P1#1",
+    "detector_id": "refactorToProtocolExtension",
+    "classification": "TP",
+    "reason": "Type and source/target entity tuple reviewed against frozen oracle and pair source; payload identity assertions passed.",
+    "raw_output": "raw/R2-P1.json",
+    "reviewer": "Automated payload identity checks; not independent human review."
+  },
+  {
+    "case_id": "R2-P2",
+    "expectation_id": "R2-P2-E1",
+    "output_record_id": "R2-P2#1",
+    "detector_id": "refactorToProtocolExtension",
+    "classification": "TP",
+    "reason": "Type and source/target entity tuple reviewed against frozen oracle and pair source; payload identity assertions passed.",
+    "raw_output": "raw/R2-P2.json",
+    "reviewer": "Automated payload identity checks; not independent human review."
+  },
+  {
+    "case_id": "R2-P3",
+    "expectation_id": "R2-P3-E1",
+    "output_record_id": "R2-P3#1",
+    "detector_id": "refactorToProtocolExtension",
+    "classification": "TP",
+    "reason": "Type and source/target entity tuple reviewed against frozen oracle and pair source; payload identity assertions passed.",
+    "raw_output": "raw/R2-P3.json",
+    "reviewer": "Automated payload identity checks; not independent human review."
+  },
+  {
+    "case_id": "R3-P1",
+    "expectation_id": "R3-P1-E1",
+    "output_record_id": "R3-P1#1",
+    "detector_id": "refactorToTypeExtension",
+    "classification": "TP",
+    "reason": "Type and source/target entity tuple reviewed against frozen oracle and pair source; payload identity assertions passed.",
+    "raw_output": "raw/R3-P1.json",
+    "reviewer": "Automated payload identity checks; not independent human review."
+  },
+  {
+    "case_id": "R3-P2",
+    "expectation_id": "R3-P2-E1",
+    "output_record_id": "R3-P2#1",
+    "detector_id": "refactorToTypeExtension",
+    "classification": "TP",
+    "reason": "Type and source/target entity tuple reviewed against frozen oracle and pair source; payload identity assertions passed.",
+    "raw_output": "raw/R3-P2.json",
+    "reviewer": "Automated payload identity checks; not independent human review."
+  },
+  {
+    "case_id": "R3-P3",
+    "expectation_id": "R3-P3-E1",
+    "output_record_id": null,
+    "detector_id": "refactorToTypeExtension",
+    "classification": "FN",
+    "reason": "Nested type method moved into qualified extension emitted no catalog instance.",
+    "raw_output": "raw/R3-P3.json",
+    "reviewer": "Automated payload identity checks; not independent human review."
+  },
+  {
+    "case_id": "R4-P1",
+    "expectation_id": "R4-P1-E1",
+    "output_record_id": "R4-P1#1",
+    "detector_id": "refactorToEnumCasesWithParameters",
+    "classification": "TP",
+    "reason": "Type and source/target entity tuple reviewed against frozen oracle and pair source; payload identity assertions passed.",
+    "raw_output": "raw/R4-P1.json",
+    "reviewer": "Automated payload identity checks; not independent human review."
+  },
+  {
+    "case_id": "R4-P2",
+    "expectation_id": "R4-P2-E1",
+    "output_record_id": "R4-P2#1",
+    "detector_id": "refactorToEnumCasesWithParameters",
+    "classification": "TP",
+    "reason": "Type and source/target entity tuple reviewed against frozen oracle and pair source; payload identity assertions passed.",
+    "raw_output": "raw/R4-P2.json",
+    "reviewer": "Automated payload identity checks; not independent human review."
+  },
+  {
+    "case_id": "R4-P3",
+    "expectation_id": "R4-P3-E1",
+    "output_record_id": "R4-P3#1",
+    "detector_id": "refactorToEnumCasesWithParameters",
+    "classification": "TP",
+    "reason": "Type and source/target entity tuple reviewed against frozen oracle and pair source; payload identity assertions passed.",
+    "raw_output": "raw/R4-P3.json",
+    "reviewer": "Automated payload identity checks; not independent human review."
+  },
+  {
+    "case_id": "R5-P1",
+    "expectation_id": "R5-P1-E1",
+    "output_record_id": "R5-P1#1",
+    "detector_id": "refactorToEnumExtension",
+    "classification": "TP",
+    "reason": "Type and source/target entity tuple reviewed against frozen oracle and pair source; payload identity assertions passed.",
+    "raw_output": "raw/R5-P1.json",
+    "reviewer": "Automated payload identity checks; not independent human review."
+  },
+  {
+    "case_id": "R5-P2",
+    "expectation_id": "R5-P2-E1",
+    "output_record_id": "R5-P2#1",
+    "detector_id": "refactorToEnumExtension",
+    "classification": "TP",
+    "reason": "Type and source/target entity tuple reviewed against frozen oracle and pair source; payload identity assertions passed.",
+    "raw_output": "raw/R5-P2.json",
+    "reviewer": "Automated payload identity checks; not independent human review."
+  },
+  {
+    "case_id": "R5-P3",
+    "expectation_id": "R5-P3-E1",
+    "output_record_id": "R5-P3#1",
+    "detector_id": "refactorToEnumExtension",
+    "classification": "TP",
+    "reason": "Type and source/target entity tuple reviewed against frozen oracle and pair source; payload identity assertions passed.",
+    "raw_output": "raw/R5-P3.json",
+    "reviewer": "Automated payload identity checks; not independent human review."
+  },
+  {
+    "case_id": "R6-P1",
+    "expectation_id": "R6-P1-E1",
+    "output_record_id": "R6-P1#1",
+    "detector_id": "protocolRename",
+    "classification": "TP",
+    "reason": "Type and source/target entity tuple reviewed against frozen oracle and pair source; payload identity assertions passed.",
+    "raw_output": "raw/R6-P1.json",
+    "reviewer": "Automated payload identity checks; not independent human review."
+  },
+  {
+    "case_id": "R6-P2",
+    "expectation_id": "R6-P2-E1",
+    "output_record_id": "R6-P2#1",
+    "detector_id": "protocolRename",
+    "classification": "TP",
+    "reason": "Type and source/target entity tuple reviewed against frozen oracle and pair source; payload identity assertions passed.",
+    "raw_output": "raw/R6-P2.json",
+    "reviewer": "Automated payload identity checks; not independent human review."
+  },
+  {
+    "case_id": "R6-P3",
+    "expectation_id": "R6-P3-E1",
+    "output_record_id": "R6-P3#1",
+    "detector_id": "protocolRename",
+    "classification": "TP",
+    "reason": "Type and source/target entity tuple reviewed against frozen oracle and pair source; payload identity assertions passed.",
+    "raw_output": "raw/R6-P3.json",
+    "reviewer": "Automated payload identity checks; not independent human review."
+  },
+  {
+    "case_id": "R7-P1",
+    "expectation_id": "R7-P1-E1",
+    "output_record_id": "R7-P1#1",
+    "detector_id": "safeUnwrapOptional",
+    "classification": "TP",
+    "reason": "Type and source/target entity tuple reviewed against frozen oracle and pair source; payload identity assertions passed.",
+    "raw_output": "raw/R7-P1.json",
+    "reviewer": "Automated payload identity checks; not independent human review."
+  },
+  {
+    "case_id": "R7-P2",
+    "expectation_id": "R7-P2-E1",
+    "output_record_id": "R7-P2#1",
+    "detector_id": "safeUnwrapOptional",
+    "classification": "TP",
+    "reason": "Type and source/target entity tuple reviewed against frozen oracle and pair source; payload identity assertions passed.",
+    "raw_output": "raw/R7-P2.json",
+    "reviewer": "Automated payload identity checks; not independent human review."
+  },
+  {
+    "case_id": "R7-P3",
+    "expectation_id": "R7-P3-E1",
+    "output_record_id": null,
+    "detector_id": "safeUnwrapOptional",
+    "classification": "FN",
+    "reason": "Repeated value! uses replaced by guard let unwrapped = value emitted no catalog instance.",
+    "raw_output": "raw/R7-P3.json",
+    "reviewer": "Automated payload identity checks; not independent human review."
+  },
+  {
+    "case_id": "R8-P1",
+    "expectation_id": "R8-P1-E1",
+    "output_record_id": "R8-P1#1",
+    "detector_id": "introduceDefer",
+    "classification": "TP",
+    "reason": "Type and source/target entity tuple reviewed against frozen oracle and pair source; payload identity assertions passed.",
+    "raw_output": "raw/R8-P1.json",
+    "reviewer": "Automated payload identity checks; not independent human review."
+  },
+  {
+    "case_id": "R8-P2",
+    "expectation_id": "R8-P2-E1",
+    "output_record_id": "R8-P2#1",
+    "detector_id": "introduceDefer",
+    "classification": "TP",
+    "reason": "Type and source/target entity tuple reviewed against frozen oracle and pair source; payload identity assertions passed.",
+    "raw_output": "raw/R8-P2.json",
+    "reviewer": "Automated payload identity checks; not independent human review."
+  },
+  {
+    "case_id": "R8-P3",
+    "expectation_id": "R8-P3-E1",
+    "output_record_id": "R8-P3#1",
+    "detector_id": "introduceDefer",
+    "classification": "TP",
+    "reason": "Type and source/target entity tuple reviewed against frozen oracle and pair source; payload identity assertions passed.",
+    "raw_output": "raw/R8-P3.json",
+    "reviewer": "Automated payload identity checks; not independent human review."
+  },
+  {
+    "case_id": "R9-P1",
+    "expectation_id": "R9-P1-E1",
+    "output_record_id": "R9-P1#1",
+    "detector_id": "nameFunctionParameter",
+    "classification": "TP",
+    "reason": "Type and source/target entity tuple reviewed against frozen oracle and pair source; payload identity assertions passed.",
+    "raw_output": "raw/R9-P1.json",
+    "reviewer": "Automated payload identity checks; not independent human review."
+  },
+  {
+    "case_id": "R9-P2",
+    "expectation_id": "R9-P2-E1",
+    "output_record_id": "R9-P2#1",
+    "detector_id": "nameFunctionParameter",
+    "classification": "TP",
+    "reason": "Type and source/target entity tuple reviewed against frozen oracle and pair source; payload identity assertions passed.",
+    "raw_output": "raw/R9-P2.json",
+    "reviewer": "Automated payload identity checks; not independent human review."
+  },
+  {
+    "case_id": "R9-P3",
+    "expectation_id": "R9-P3-E1",
+    "output_record_id": "R9-P3#1",
+    "detector_id": "nameFunctionParameter",
+    "classification": "TP",
+    "reason": "Type and source/target entity tuple reviewed against frozen oracle and pair source; payload identity assertions passed.",
+    "raw_output": "raw/R9-P3.json",
+    "reviewer": "Automated payload identity checks; not independent human review."
+  },
+  {
+    "case_id": "R10-P1",
+    "expectation_id": "R10-P1-E1",
+    "output_record_id": "R10-P1#1",
+    "detector_id": "makeParameterNameOptional",
+    "classification": "TP",
+    "reason": "Type and source/target entity tuple reviewed against frozen oracle and pair source; payload identity assertions passed.",
+    "raw_output": "raw/R10-P1.json",
+    "reviewer": "Automated payload identity checks; not independent human review."
+  },
+  {
+    "case_id": "R10-P2",
+    "expectation_id": "R10-P2-E1",
+    "output_record_id": "R10-P2#1",
+    "detector_id": "makeParameterNameOptional",
+    "classification": "TP",
+    "reason": "Type and source/target entity tuple reviewed against frozen oracle and pair source; payload identity assertions passed.",
+    "raw_output": "raw/R10-P2.json",
+    "reviewer": "Automated payload identity checks; not independent human review."
+  },
+  {
+    "case_id": "R10-P3",
+    "expectation_id": "R10-P3-E1",
+    "output_record_id": "R10-P3#1",
+    "detector_id": "makeParameterNameOptional",
+    "classification": "TP",
+    "reason": "Type and source/target entity tuple reviewed against frozen oracle and pair source; payload identity assertions passed.",
+    "raw_output": "raw/R10-P3.json",
+    "reviewer": "Automated payload identity checks; not independent human review."
+  }
+]

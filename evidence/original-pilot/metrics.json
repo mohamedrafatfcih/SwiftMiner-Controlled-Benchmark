@@ -1,0 +1,25 @@
+{
+  "tp": 27,
+  "fp": 0,
+  "fn": 3,
+  "precision": 1.0,
+  "conditional_recall": 0.9,
+  "f1": 0.9473684210526315,
+  "all_case_positive_recovery": 0.9,
+  "completed": 40,
+  "planned": 40,
+  "failures": 0,
+  "timeouts": 0,
+  "negative_controls_with_detections": 0,
+  "negative_controls_completed": 10,
+  "total_negative_control_detections": 0,
+  "duplicate_emissions": 0,
+  "total_catalog_emissions": 27,
+  "duration_seconds": {
+    "total": 6.218937654000001,
+    "median": 0.14642928249986653,
+    "minimum": 0.11431378299948847,
+    "maximum": 0.22516277300019283
+  },
+  "review": "Automated payload identity checks; author confirmation recommended for publication."
+}

@@ -1,0 +1,802 @@
+{
+  "tp": 25,
+  "fp": 19,
+  "fn": 5,
+  "git_version": "git version 2.39.3 (Apple Git-145)",
+  "cases": [
+    {
+      "case_id": "R1-P1",
+      "candidates": [
+        {
+          "old": [
+            1,
+            1
+          ],
+          "new": [
+            1,
+            4
+          ],
+          "matched": true
+        },
+        {
+          "old": [
+            4,
+            1
+          ],
+          "new": [
+            7,
+            1
+          ],
+          "matched": false
+        }
+      ],
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "case_id": "R1-P2",
+      "candidates": [
+        {
+          "old": [
+            1,
+            1
+          ],
+          "new": [
+            1,
+            4
+          ],
+          "matched": true
+        },
+        {
+          "old": [
+            4,
+            1
+          ],
+          "new": [
+            7,
+            1
+          ],
+          "matched": false
+        }
+      ],
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "case_id": "R1-P3",
+      "candidates": [
+        {
+          "old": [
+            2,
+            1
+          ],
+          "new": [
+            6,
+            1
+          ],
+          "matched": true
+        },
+        {
+          "old": [
+            7,
+            1
+          ],
+          "new": [
+            11,
+            1
+          ],
+          "matched": false
+        }
+      ],
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "case_id": "R1-N1",
+      "candidates": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "case_id": "R2-P1",
+      "candidates": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "case_id": "R2-P2",
+      "candidates": [
+        {
+          "old": [
+            4,
+            1
+          ],
+          "new": [
+            4,
+            2
+          ],
+          "matched": true
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "case_id": "R2-P3",
+      "candidates": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "case_id": "R2-N1",
+      "candidates": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "case_id": "R3-P1",
+      "candidates": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "case_id": "R3-P2",
+      "candidates": [
+        {
+          "old": [
+            1,
+            1
+          ],
+          "new": [
+            1,
+            2
+          ],
+          "matched": true
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "case_id": "R3-P3",
+      "candidates": [
+        {
+          "old": [
+            2,
+            3
+          ],
+          "new": [
+            2,
+            4
+          ],
+          "matched": true
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "case_id": "R3-N1",
+      "candidates": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "case_id": "R4-P1",
+      "candidates": [
+        {
+          "old": [
+            1,
+            2
+          ],
+          "new": [
+            1,
+            2
+          ],
+          "matched": true
+        },
+        {
+          "old": [
+            4,
+            1
+          ],
+          "new": [
+            4,
+            1
+          ],
+          "matched": false
+        },
+        {
+          "old": [
+            7,
+            1
+          ],
+          "new": [
+            7,
+            1
+          ],
+          "matched": false
+        }
+      ],
+      "tp": 1,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "case_id": "R4-P2",
+      "candidates": [
+        {
+          "old": [
+            1,
+            2
+          ],
+          "new": [
+            1,
+            2
+          ],
+          "matched": true
+        },
+        {
+          "old": [
+            4,
+            1
+          ],
+          "new": [
+            4,
+            1
+          ],
+          "matched": false
+        },
+        {
+          "old": [
+            7,
+            1
+          ],
+          "new": [
+            7,
+            1
+          ],
+          "matched": false
+        }
+      ],
+      "tp": 1,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "case_id": "R4-P3",
+      "candidates": [
+        {
+          "old": [
+            1,
+            2
+          ],
+          "new": [
+            1,
+            2
+          ],
+          "matched": true
+        },
+        {
+          "old": [
+            4,
+            2
+          ],
+          "new": [
+            4,
+            2
+          ],
+          "matched": false
+        },
+        {
+          "old": [
+            9,
+            1
+          ],
+          "new": [
+            9,
+            1
+          ],
+          "matched": false
+        }
+      ],
+      "tp": 1,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "case_id": "R4-N1",
+      "candidates": [
+        {
+          "old": [
+            3,
+            1
+          ],
+          "new": [
+            3,
+            1
+          ],
+          "matched": false
+        },
+        {
+          "old": [
+            5,
+            1
+          ],
+          "new": [
+            5,
+            1
+          ],
+          "matched": false
+        }
+      ],
+      "tp": 0,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "case_id": "R5-P1",
+      "candidates": [
+        {
+          "old": [
+            2,
+            1
+          ],
+          "new": [
+            2,
+            4
+          ],
+          "matched": true
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "case_id": "R5-P2",
+      "candidates": [
+        {
+          "old": [
+            2,
+            2
+          ],
+          "new": [
+            2,
+            5
+          ],
+          "matched": true
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "case_id": "R5-P3",
+      "candidates": [
+        {
+          "old": [
+            2,
+            1
+          ],
+          "new": [
+            2,
+            9
+          ],
+          "matched": true
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "case_id": "R5-N1",
+      "candidates": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "case_id": "R6-P1",
+      "candidates": [
+        {
+          "old": [
+            1,
+            2
+          ],
+          "new": [
+            1,
+            2
+          ],
+          "matched": true
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "case_id": "R6-P2",
+      "candidates": [
+        {
+          "old": [
+            1,
+            2
+          ],
+          "new": [
+            1,
+            2
+          ],
+          "matched": true
+        },
+        {
+          "old": [
+            5,
+            1
+          ],
+          "new": [
+            5,
+            1
+          ],
+          "matched": false
+        }
+      ],
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "case_id": "R6-P3",
+      "candidates": [
+        {
+          "old": [
+            1,
+            2
+          ],
+          "new": [
+            1,
+            2
+          ],
+          "matched": true
+        },
+        {
+          "old": [
+            5,
+            1
+          ],
+          "new": [
+            5,
+            1
+          ],
+          "matched": false
+        }
+      ],
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "case_id": "R6-N1",
+      "candidates": [
+        {
+          "old": [
+            3,
+            1
+          ],
+          "new": [
+            3,
+            1
+          ],
+          "matched": false
+        }
+      ],
+      "tp": 0,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "case_id": "R7-P1",
+      "candidates": [
+        {
+          "old": [
+            1,
+            1
+          ],
+          "new": [
+            1,
+            4
+          ],
+          "matched": true
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "case_id": "R7-P2",
+      "candidates": [
+        {
+          "old": [
+            2,
+            1
+          ],
+          "new": [
+            2,
+            3
+          ],
+          "matched": true
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "case_id": "R7-P3",
+      "candidates": [
+        {
+          "old": [
+            1,
+            1
+          ],
+          "new": [
+            1,
+            4
+          ],
+          "matched": true
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "case_id": "R7-N1",
+      "candidates": [
+        {
+          "old": [
+            1,
+            1
+          ],
+          "new": [
+            1,
+            1
+          ],
+          "matched": false
+        }
+      ],
+      "tp": 0,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "case_id": "R8-P1",
+      "candidates": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "case_id": "R8-P2",
+      "candidates": [
+        {
+          "old": [
+            7,
+            4
+          ],
+          "new": [
+            7,
+            2
+          ],
+          "matched": true
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "case_id": "R8-P3",
+      "candidates": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "case_id": "R8-N1",
+      "candidates": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "case_id": "R9-P1",
+      "candidates": [
+        {
+          "old": [
+            1,
+            2
+          ],
+          "new": [
+            1,
+            2
+          ],
+          "matched": true
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "case_id": "R9-P2",
+      "candidates": [
+        {
+          "old": [
+            1,
+            2
+          ],
+          "new": [
+            1,
+            2
+          ],
+          "matched": true
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "case_id": "R9-P3",
+      "candidates": [
+        {
+          "old": [
+            2,
+            1
+          ],
+          "new": [
+            2,
+            1
+          ],
+          "matched": true
+        },
+        {
+          "old": [
+            4,
+            1
+          ],
+          "new": [
+            4,
+            1
+          ],
+          "matched": false
+        }
+      ],
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "case_id": "R9-N1",
+      "candidates": [
+        {
+          "old": [
+            1,
+            1
+          ],
+          "new": [
+            1,
+            1
+          ],
+          "matched": false
+        }
+      ],
+      "tp": 0,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "case_id": "R10-P1",
+      "candidates": [
+        {
+          "old": [
+            1,
+            2
+          ],
+          "new": [
+            1,
+            2
+          ],
+          "matched": true
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "case_id": "R10-P2",
+      "candidates": [
+        {
+          "old": [
+            1,
+            2
+          ],
+          "new": [
+            1,
+            2
+          ],
+          "matched": true
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "case_id": "R10-P3",
+      "candidates": [
+        {
+          "old": [
+            2,
+            1
+          ],
+          "new": [
+            2,
+            1
+          ],
+          "matched": true
+        },
+        {
+          "old": [
+            4,
+            1
+          ],
+          "new": [
+            4,
+            1
+          ],
+          "matched": false
+        }
+      ],
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "case_id": "R10-N1",
+      "candidates": [
+        {
+          "old": [
+            1,
+            2
+          ],
+          "new": [
+            1,
+            2
+          ],
+          "matched": false
+        }
+      ],
+      "tp": 0,
+      "fp": 1,
+      "fn": 0
+    }
+  ]
+}

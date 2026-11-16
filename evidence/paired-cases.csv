@@ -1,0 +1,41 @@
+case_id,expected_instances,git_matched,git_unmatched,git_missed,swiftminer_match,swiftminer_typed_entity_information
+R1-P1,1,1,1,0,TP,present
+R1-P2,1,1,1,0,TP,present
+R1-P3,1,1,1,0,FN,absent
+R1-N1,0,0,0,0,no catalog emission,absent
+R2-P1,1,0,0,1,TP,present
+R2-P2,1,1,0,0,TP,present
+R2-P3,1,0,0,1,TP,present
+R2-N1,0,0,0,0,no catalog emission,absent
+R3-P1,1,0,0,1,TP,present
+R3-P2,1,1,0,0,TP,present
+R3-P3,1,1,0,0,FN,absent
+R3-N1,0,0,0,0,no catalog emission,absent
+R4-P1,1,1,2,0,TP,present
+R4-P2,1,1,2,0,TP,present
+R4-P3,1,1,2,0,TP,present
+R4-N1,0,0,2,0,no catalog emission,absent
+R5-P1,1,1,0,0,TP,present
+R5-P2,1,1,0,0,TP,present
+R5-P3,1,1,0,0,TP,present
+R5-N1,0,0,0,0,no catalog emission,absent
+R6-P1,1,1,0,0,TP,present
+R6-P2,1,1,1,0,TP,present
+R6-P3,1,1,1,0,TP,present
+R6-N1,0,0,1,0,no catalog emission,absent
+R7-P1,1,1,0,0,TP,present
+R7-P2,1,1,0,0,TP,present
+R7-P3,1,1,0,0,FN,absent
+R7-N1,0,0,1,0,no catalog emission,absent
+R8-P1,1,0,0,1,TP,present
+R8-P2,1,1,0,0,TP,present
+R8-P3,1,0,0,1,TP,present
+R8-N1,0,0,0,0,no catalog emission,absent
+R9-P1,1,1,0,0,TP,present
+R9-P2,1,1,0,0,TP,present
+R9-P3,1,1,1,0,TP,present
+R9-N1,0,0,1,0,no catalog emission,absent
+R10-P1,1,1,0,0,TP,present
+R10-P2,1,1,0,0,TP,present
+R10-P3,1,1,1,0,TP,present
+R10-N1,0,0,1,0,no catalog emission,absent
