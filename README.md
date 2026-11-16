@@ -11,6 +11,7 @@ Start with the [case index](CASE_INDEX.md) and [answer key with current validati
 - [Original SwiftMiner pilot](evidence/original-pilot/metrics.json) completed all 40 cases and reported 27 true positives, 0 false positives, and 3 false negatives. The original output and scoring records are linked in the same directory. SwiftMiner scoring checks the type and relevant code entities.
 - [Fixture checks](evidence/fixture-results.json) record independent compilation and selected R7/R8 executable behavior checks, performed after the pilot.
 - [Git line-diff results](evidence/git-baseline-results.json) record which edit hunks flagged corresponding spans on the same 40 pairs. See [paired cases](evidence/paired-cases.csv) and [intervals](evidence/confidence-intervals.json). The Git rule measures line-level correspondence.
+- **Author re-annotation.** The author re-labeled all 40 shuffled pairs about one day after last seeing the original labels. Before reconciliation, 37 of 40 labels agreed (92.5%, Cohen’s κ = 0.916). The three disagreements were checked against the catalog conditions, and the frozen answer key was retained. Independent review remains future work.
 
 From a clone, Python 3 and Git reproduce the text baseline:
 
