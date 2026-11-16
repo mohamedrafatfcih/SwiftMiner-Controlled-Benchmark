@@ -4,7 +4,7 @@ The benchmark contains 40 independent before/after Swift revision pairs covering
 
 ## Inspect the cases
 
-Start with the [case index](CASE_INDEX.md) and [frozen answer key](oracle.json). Each case branch contains an after commit whose sole parent is the before commit. The cases directory holds the same source snapshots for convenient browsing. The evaluated case commits and frozen answer key retain their original identities.
+Start with the [case index](CASE_INDEX.md) and [answer key with current validation status](oracle.json). Each case branch contains an after commit whose sole parent is the before commit. The cases directory holds the same source snapshots for convenient browsing. The evaluated case commits and expected answers are unchanged. The [original answer key at the benchmark freeze](https://github.com/mohamedrafatfcih/SwiftMiner-Controlled-Benchmark/blob/04211fd384db481b02837e83c9353eb286211b61/oracle.json) preserves the construction-time metadata.
 
 ## Check the evidence
 

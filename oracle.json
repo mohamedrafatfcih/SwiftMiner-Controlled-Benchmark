@@ -15,8 +15,8 @@
     "nameFunctionParameter",
     "makeParameterNameOptional"
   ],
-  "construction": "Author-designed; generated after reviewing detector implementation; not held-out or independent.",
-  "validation": "Manual source review and structural integrity checks only. Not compiled; no behavior tests executed.",
+  "construction": "The authors designed these controlled cases after reviewing SwiftMiner's implementation. The cases were available during development.",
+  "validation": "Initial validation used manual source review and structural checks. In follow-up validation, all 80 before/after source snapshots compiled with Apple Swift 5.9.2 for x86_64-apple-macosx13.0. All six R7/R8 executable behavior checks passed for the tested inputs and paths. See evidence/fixture-results.json.",
   "cases": [
     {
       "case_id": "R1-P1",
